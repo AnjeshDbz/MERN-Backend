@@ -1,10 +1,14 @@
 let express = require("express");
+require("dotenv").config();
 const { checkToken } = require("./checkTokenMiddleware");
 
 let app = express();
+
+console.log(process.env.MYToken);
+
 app.use(express.json());
 // let myToken = "12345";
-let myPass = "12345";
+// let myPass = "12345";
 
 // let checkToken = (req, res, next) => {
 //   console.log(req.query.token);
@@ -79,4 +83,6 @@ app.post("/login", (req, res) => {
 
 // test
 
-app.listen("8000");
+// app.listen("8000");
+
+app.listen(process.env.Port || 5000);

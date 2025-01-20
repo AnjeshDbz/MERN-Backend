@@ -4,7 +4,7 @@ const { checkToken } = require("./checkTokenMiddleware");
 
 let app = express();
 
-console.log(process.env.MYToken);
+// console.log(process.env.MYToken);
 
 app.use(express.json());
 // let myToken = "12345";
